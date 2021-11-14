@@ -3,88 +3,99 @@
     <head>
         <meta charset="UTF-8">
         <meta name= "viewpport" content="width=device-width, initial scale=1.0">
-        <!--link to CSS styling-->
         <link rel="stylesheet" href="./assets/css/style.css">
         <title>Jennifer Keene</title>
     </head>
 
     <body>
-        <!--header-->
+        <!--CHILD ONE...header-->
         <header>
-            <h1>
-                Portfolio/Better than Michael Keene
-            </h1>
+            <span>
+                <h1>Jennifer Keene</h1>
+            </span>
 
             <!--nav bar-->
             <nav>
                 <ul>
-                    <li>
-                        <a href="#About-Me">About Me</a>
-                    </li>
-                    <li>
-                        <a href="#Projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href=#Contact">Contact Me</a>
-                    </li>
-                </ul>
+                    <li> <a href="#About-Me">About Me</a> </li>
+                    <li> <a href="#Projects">Projects</a> </li>
+                    <li> <a href=#Contact">Contact Me</a> </li>
+                </ul>  
             </nav>
         </header>
 
-        <!--hero section-->
+        <!--CHILD TWO...hero section-->
         <section class="hero">
-            <!--image of me-->
-            <img src="./assets/images/jennyk.JPG">
+            <h1>Portfolio</h1>
         </section>
 
-        <!--about me section-->
-        <section id= "About-Me">
+        <!--CHILD THREE...about me section-->
+        <section id= "aboutme" class="aboutme">
             <h2>About Me</h2>
+                <!--image of me-->
+            <img src="./assets/images/jennyk.JPG">
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ipsum obcaecati quo veniam delectus temporibus recusandae in consectetur tempore repellendus debitis libero, ad voluptate laborum nisi sequi incidunt voluptas? Repellendus?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ipsum obcaecati quo veniam delectus temporibus recusandae in consectetur tempore repellendus debitis libero, ad voluptate laborum nisi sequi incidunt voluptas? Repellendus?
             </p>
         </section>
 
-        <!--work/projects section-->
-        <section id="Projects">
+        <!--CHILD FOUR...work/projects section-->
+        <section id="Projects" class=projects>
             <h2>Projects</h2>
-
-            <!--run buddy project-->
+            <section class="project-boxes">
                 
+                <!--run buddy project-->
+                <article class="run-buddy">
+                    Run Buddy
+                </article>    
                 <!--subtitle HTML/CSS-->
-
+                
                 <!--link to project-->
-
-            <!--code refractor project-->
-
+                
+                <!--code refractor project-->
+                <article class="refractor">
+                    
+                    refractor
+                </article>
                 <!--subtitle HTML/CSS refractor-->
-
+                
                 <!--link to project-->
-
-            <!--robot game project-->
-
+                
+                <!--robot game project-->
+                <article class="robot">
+                    Robot
+                </article>
                 <!--subtitle JavaScript-->
-
+                
                 <!--link to project-->
-
+                
+            </section>
         </section>
 
-        <!--footer-->
+        <!--CHILD FIVE...footer/contact info-->
         <footer id="Contact">
-            Contact Me:
+            <h2>
+                Contact Me:
+            </h2>
 
-            <!--second nav bar-->
-            <nav>
-                <ul>
-                    <li>
-                        Cell:
-                    </li>
-
-                    <li>
-                        Website
-                    </li>
-                </ul>
-            </nav>
+            <ul>
+                <!--phone number-->
+                <li>
+                    210-XXX-XXXX
+                </li>
+                <!--website-->
+                <li>
+                    jenny@website.com
+                </li>
+                <!--GitHub link-->
+                <li>
+                    GitHub
+                </li>
+                <!--LinkedIn link-->
+                <li>
+                    LinkedIn
+                </li>
+            </ul>
         </footer>
     </body>
 </html>

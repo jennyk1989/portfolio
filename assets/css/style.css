@@ -1,21 +1,145 @@
+/*overrides default CSS style*/
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+/*********    Variables    *********/
 
-/*body style*/
+
+/********BODY*********/
+/*BODY body style*/
 body {
-    color:gainsboro;
+    background-color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    text-decoration: none;
 }
 
+/*********    Child 1...Header    *********/
 /* header & navigation bar styling */
 header {
-    padding: 20px 35px;
-    background-color:deepskyblue;
+    
     display: flex; 
     justify-content: space-between;
     flex-wrap: wrap;
+    list-style: none;
+
+    background-color: #34495E;
+    color:gainsboro;
+    
 }
 
+header h1 {
+    background-color: gainsboro;
+    color: #34495E;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+
+}
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    list-style: none;
+    
+}
+
+header nav ul li {
+    margin: 10px 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: gainsboro;
+    border-bottom: 4px solid;
+    padding: 10px 0;
+}
+
+/*-------------------------------------------------------------------------*/
+
+/*********    Child 2...hero section    *********/
+/* "Portfolio" & background image styling*/
+.hero {
+    height: 200px;
+    background-image: url("../images/black-sand.jpeg");
+    background-size: cover;
+}
+
+.hero h1 {
+    display: flex;
+    justify-content: flex-end;
+    color: gainsboro;
+    margin-top: 10%;
+    margin-right: 20px;
+}
+/*-------------------------------------------------------------------------*/
+
+/*********     Child 3...about me Section     *********/
+
+/* "about me" section styling*/
+.aboutme {
+    width: 100%;
+    padding: 25px;
+    margin: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: none;
+    justify-content: space-around;
+}
+
+/**GRANDKID 1..."about me"**/
+.aboutme h2 { 
+    color: #34495E;
+    text-align: center;
+}
+/**GRANDKID 2...image**/
+.aboutme img {
+    height: 200px;
+}
+
+/**GRANDKID 3...text*/
+.aboutme p {
+    background-color: darkgray;
+}
+/*-------------------------------------------------------------------------*/
+
+/*********     Child 4...projects Section     *********/
+.projects {
+    display: flex;
+    flex-direction: row;
+    background-color: #34495E;
+    height: 900px;
+}
+
+.projects h2 {
+    color:gainsboro;
+
+}
+.project-boxes {
+    display: flex;
+    background-color: gainsboro;
+}
+
+.run-buddy {
+    background-image: url("../images/hero-bg.jpeg");
+}
+/*-------------------------------------------------------------------------*/
+
+/*********     Child 5...footer/ contact me Section     *********/
+.footer {
+    background-color: #34495E;
+    display: flex;
+}
+/*-------------------------------------------------------------------------*/
