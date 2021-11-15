@@ -10,49 +10,44 @@
 /********BODY*********/
 /*BODY body style*/
 body {
-    background-color: whitesmoke;
+    background-image: url("../images/pexels-sami-anas-5641973.jpg");
+    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0;
-    text-decoration: none;
+    flex-wrap: nowrap;
 }
 
 /*********    Child 1...Header    *********/
 /* header & navigation bar styling */
 header {
-    
     display: flex; 
-    justify-content: space-between;
     flex-wrap: wrap;
-    list-style: none;
-
-    background-color: #34495E;
-    color:gainsboro;
-    
+    align-items: center;
 }
 
-header h1 {
+header span {
     background-color: gainsboro;
     color: #34495E;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    align-items:center;
+    order: 1;
+    flex: 1;
+}
+header h1 {
+    text-align: center;
 }
 
 header nav {
-    display: flex;
-    justify-content: space-around;
-
+    order: 2;
+    flex: 3;
+    padding: 20px 0px;
 }
 header nav ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 20px;
+    justify-content: flex-end;
     list-style: none;
+    margin: 5vh 5vh;
     
 }
 
@@ -72,17 +67,24 @@ header nav ul li a {
 /*********    Child 2...hero section    *********/
 /* "Portfolio" & background image styling*/
 .hero {
-    height: 200px;
-    background-image: url("../images/black-sand.jpeg");
-    background-size: cover;
+    height: 150px;
+    /*background-image: url("../images/ice.jpeg");
+    background-size: cover;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-.hero h1 {
-    display: flex;
-    justify-content: flex-end;
-    color: gainsboro;
-    margin-top: 10%;
-    margin-right: 20px;
+.portfolio {
+    background-color: gainsboro;
+    color: #34495E;
+    border: 3px solid #34495E;
+    margin: 25px 35px;
+    padding: 25px 45px;
+    font-size: 30px;
+    font-weight: bolder;
+
 }
 /*-------------------------------------------------------------------------*/
 
@@ -90,56 +92,158 @@ header nav ul li a {
 
 /* "about me" section styling*/
 .aboutme {
-    width: 100%;
-    padding: 25px;
-    margin: 25px;
     display: flex;
     flex-direction: row;
     flex-wrap: none;
     justify-content: space-around;
+    
+    align-items: center;
 }
 
 /**GRANDKID 1..."about me"**/
 .aboutme h2 { 
-    color: #34495E;
+    color: gainsboro;
     text-align: center;
+    order: 1;
+    flex: 1;
 }
-/**GRANDKID 2...image**/
-.aboutme img {
+
+.aboutmecontent {
+    display: flex;
+    background-color: gainsboro;
+    color: #34495E;
+    order: 2;
+    flex: 3;
+}
+.aboutmecontent img {
     height: 200px;
 }
 
 /**GRANDKID 3...text*/
 .aboutme p {
-    background-color: darkgray;
+    text-size-adjust: auto;
 }
 /*-------------------------------------------------------------------------*/
 
 /*********     Child 4...projects Section     *********/
+
 .projects {
     display: flex;
     flex-direction: row;
-    background-color: #34495E;
-    height: 900px;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 200vh;
+    color: gainsboro;
+    margin-top: 100px;
+
 }
 
 .projects h2 {
+    text-align: center;
     color:gainsboro;
-
+    order: 1;
+    flex: 1;
 }
-.project-boxes {
+
+/* relating run-buddy to smaller projects */
+.project-main {
     display: flex;
-    background-color: gainsboro;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    order: 2;
+    flex: 3;
 }
 
-.run-buddy {
-    background-image: url("../images/hero-bg.jpeg");
+/**    RUN BUDDY **/
+
+.run-buddy a {
+    width: 100%;
+    height: 100%;
+}
+.run-buddy a img {
+    object-fit: cover;
+    width: 100%;
+}
+/*****Smaller Projects*****/
+.sub-projects {
+    display:flex;
+    max-height: 200px;
+    overflow: hidden;
+}
+/**refractor**/
+.refractor {
+    order: 1;
+    flex: 2;
+}
+.refractor a {
+    width: 100%;
+    height: 100%;
+}
+.refractor a img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.robot {
+    order: 2;
+    flex: 2;
+}
+.robot a {
+    width: 100%;
+    height: 100%;
+}
+.robot a img {
+    object-fit: cover;
+    width: 100%;
 }
 /*-------------------------------------------------------------------------*/
 
 /*********     Child 5...footer/ contact me Section     *********/
-.footer {
-    background-color: #34495E;
+footer {
+    background-color: gainsboro;
     display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 100px;
+    color: #34495E;
+    padding: 10px;
+}
+
+footer h2 {
+    order: 1;
+    flex: 1;
+}
+footer .list {
+    order: 2;
+    flex: 3;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul li {
+    border-bottom: 3px solid #34495E;
+}
+footer ul a {
+    text-decoration: none;
+    color:#34495E;
 }
 /*-------------------------------------------------------------------------*/
+
+@media screen and (max-width: 980px) {
+    body {  
+        width: fit-content;
+        flex-grow: 0;
+    }
+}
+    
+@media screen and (max-width: 768px) {
+    body {  
+        width: fit-content;
+    }
+  }
