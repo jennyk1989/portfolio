@@ -1,4 +1,4 @@
-# portfolio
+# Portfolio
 
 ## Description
 Portfolio designed with HTML and CSS
